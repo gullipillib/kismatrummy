@@ -311,7 +311,10 @@
 	
 	protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
 	{
-
+		
+		if (selectcard == 1)
+		{ 
+		
 		if  (j == 100)
 		{
 			j = 0;
@@ -349,7 +352,7 @@
 			sortcards(j, k);
 			
 		}
-		
+		}
 		
 	}
 
@@ -357,84 +360,92 @@
 	{
 
 
-		if  (j == 100)
-		{
-			j = 1;
-			ImageButton2.BorderColor = System.Drawing.Color.Red;
-			ImageButton2.BorderStyle = BorderStyle.Solid;
-			selectedcard1 = player1cards[1];
-		}
-
-		else if (j != 100 && k == 100)
-		{
-			k = 1;
-			
-		}
-		else if (k  == 14)
+		if (selectcard == 1)
 		{
 
-			if (player1cards[13] != 0)
+			if (j == 100)
 			{
+				j = 1;
 				ImageButton2.BorderColor = System.Drawing.Color.Red;
 				ImageButton2.BorderStyle = BorderStyle.Solid;
 				selectedcard1 = player1cards[1];
-				selectedcard2 = player1cards[13];
-				player1cards[13] = selectedcard1;
-				player1cards[1] = selectedcard2;
-				Timer1.Enabled = true;
-				fillcards();
-				Timer1.Enabled = true;
+			}
+
+			else if (j != 100 && k == 100)
+			{
+				k = 1;
+
+			}
+			else if (k == 14)
+			{
+
+				if (player1cards[13] != 0)
+				{
+					ImageButton2.BorderColor = System.Drawing.Color.Red;
+					ImageButton2.BorderStyle = BorderStyle.Solid;
+					selectedcard1 = player1cards[1];
+					selectedcard2 = player1cards[13];
+					player1cards[13] = selectedcard1;
+					player1cards[1] = selectedcard2;
+					Timer1.Enabled = true;
+					fillcards();
+					Timer1.Enabled = true;
+
+				}
+			}
+
+			if (j != 100 && k != 100 && j != 14 && k != 14)
+			{
+				selectcard = 0;
+				sortcards(j, k);
 
 			}
 		}
-
-		if (j != 100 && k != 100 && j != 14 && k != 14)
-		{
-			selectcard = 0;
-			sortcards(j, k);
-			
-		}	
 			
 	}
 
 	protected void ImageButton3_Click(object sender, ImageClickEventArgs e)
 	{
 
-		if  (j == 100)
-		{
-			j = 2;
-			ImageButton3.BorderColor = System.Drawing.Color.Red;
-			ImageButton3.BorderStyle = BorderStyle.Solid;
-			selectedcard1 = player1cards[2];
-		}
-
-		else if (j != 100 && k == 100)
-		{
-			k = 2;
-			
-		}
-		else if (k  == 14)
+		if (selectcard == 1)
 		{
 
-			if (player1cards[13] != 0)
+			if (j == 100)
 			{
+				j = 2;
 				ImageButton3.BorderColor = System.Drawing.Color.Red;
 				ImageButton3.BorderStyle = BorderStyle.Solid;
 				selectedcard1 = player1cards[2];
-				selectedcard2 = player1cards[13];
-				player1cards[13] = selectedcard1;
-				player1cards[2] = selectedcard2;
-				Timer1.Enabled = true;
-				fillcards();
-				Timer1.Enabled = true;
 			}
-		}
 
-		if (j != 100 && k != 100 && j != 14 && k != 14)
-		{
-			selectcard = 0;
-			sortcards(j, k);
-			
+			else if (j != 100 && k == 100)
+			{
+				k = 2;
+
+			}
+			else if (k == 14)
+			{
+
+				if (player1cards[13] != 0)
+				{
+					ImageButton3.BorderColor = System.Drawing.Color.Red;
+					ImageButton3.BorderStyle = BorderStyle.Solid;
+					selectedcard1 = player1cards[2];
+					selectedcard2 = player1cards[13];
+					player1cards[13] = selectedcard1;
+					player1cards[2] = selectedcard2;
+					Timer1.Enabled = true;
+					fillcards();
+					Timer1.Enabled = true;
+				}
+			}
+
+			if (j != 100 && k != 100 && j != 14 && k != 14)
+			{
+				selectcard = 0;
+				sortcards(j, k);
+
+			}
 		}
 		
 	}
@@ -442,211 +453,227 @@
 	protected void ImageButton4_Click(object sender, ImageClickEventArgs e)
 	{
 
-		if  (j == 100)
-		{
-			j = 3;
-			ImageButton4.BorderColor = System.Drawing.Color.Red;
-			ImageButton4.BorderStyle = BorderStyle.Solid;
-			selectedcard1 = player1cards[3];
-		}
-
-		else if (j != 100 && k == 100)
-		{
-			k = 3;
-			
-		}
-		else if (k  == 14)
+		if (selectcard == 1)
 		{
 
-			if (player1cards[13] != 0)
+			if (j == 100)
 			{
+				j = 3;
 				ImageButton4.BorderColor = System.Drawing.Color.Red;
 				ImageButton4.BorderStyle = BorderStyle.Solid;
 				selectedcard1 = player1cards[3];
-				selectedcard2 = player1cards[13];
-				player1cards[13] = selectedcard1;
-				player1cards[3] = selectedcard2;
-				Timer1.Enabled = true;
-				fillcards();
-				Timer1.Enabled = true;
+			}
+
+			else if (j != 100 && k == 100)
+			{
+				k = 3;
+
+			}
+			else if (k == 14)
+			{
+
+				if (player1cards[13] != 0)
+				{
+					ImageButton4.BorderColor = System.Drawing.Color.Red;
+					ImageButton4.BorderStyle = BorderStyle.Solid;
+					selectedcard1 = player1cards[3];
+					selectedcard2 = player1cards[13];
+					player1cards[13] = selectedcard1;
+					player1cards[3] = selectedcard2;
+					Timer1.Enabled = true;
+					fillcards();
+					Timer1.Enabled = true;
+				}
+			}
+
+			if (j != 100 && k != 100 && j != 14 && k != 14)
+			{
+				selectcard = 0;
+				sortcards(j, k);
+
 			}
 		}
-
-		if (j != 100 && k != 100 && j != 14 && k != 14)
-		{
-			selectcard = 0;
-			sortcards(j, k);
-			
-		}
-
 	}
 
 	protected void ImageButton5_Click(object sender, ImageClickEventArgs e)
 	{
 
 
-		if  (j == 100)
-		{
-			j = 4;
-			ImageButton5.BorderColor = System.Drawing.Color.Red;
-			ImageButton5.BorderStyle = BorderStyle.Solid;
-			selectedcard1 = player1cards[4];
-		}
-		else if (j != 100 && k == 100)
-		{
-			k = 4;
-			
-		}
-		else if (j == 100 && k == 14)
+		if (selectcard == 1)
 		{
 
-			if (player1cards[13] != 0)
+			if (j == 100)
 			{
+				j = 4;
 				ImageButton5.BorderColor = System.Drawing.Color.Red;
 				ImageButton5.BorderStyle = BorderStyle.Solid;
 				selectedcard1 = player1cards[4];
-				selectedcard2 = player1cards[13];
-				player1cards[13] = selectedcard1;
-				player1cards[4] = selectedcard2;
-				Timer1.Enabled = true;
-				fillcards();
-				Timer1.Enabled = true;
+			}
+			else if (j != 100 && k == 100)
+			{
+				k = 4;
+
+			}
+			else if (j == 100 && k == 14)
+			{
+
+				if (player1cards[13] != 0)
+				{
+					ImageButton5.BorderColor = System.Drawing.Color.Red;
+					ImageButton5.BorderStyle = BorderStyle.Solid;
+					selectedcard1 = player1cards[4];
+					selectedcard2 = player1cards[13];
+					player1cards[13] = selectedcard1;
+					player1cards[4] = selectedcard2;
+					Timer1.Enabled = true;
+					fillcards();
+					Timer1.Enabled = true;
+
+				}
+			}
+
+			if (j != 100 && k != 100 && j != 14 && k != 14)
+			{
+				selectcard = 0;
+				sortcards(j, k);
 
 			}
 		}
-
-		if (j != 100 && k != 100 && j != 14 && k != 14)
-		{
-			selectcard = 0;
-			sortcards(j, k);
-			
-		}
-		
 	}
 
 	protected void ImageButton6_Click(object sender, ImageClickEventArgs e)
 	{
 
 
-		if  (j == 100)
-		{
-			j = 5;
-			ImageButton6.BorderColor = System.Drawing.Color.Red;
-			ImageButton6.BorderStyle = BorderStyle.Solid;
-			selectedcard1 = player1cards[5];
-		}
-		else if (j != 100 && k == 100)
-		{
-			k = 5;
-			
-		}
-		else if (j == 100 && k == 14)
+		if (selectcard == 1)
 		{
 
-			if (player1cards[13] != 0)
+			if (j == 100)
 			{
+				j = 5;
 				ImageButton6.BorderColor = System.Drawing.Color.Red;
 				ImageButton6.BorderStyle = BorderStyle.Solid;
 				selectedcard1 = player1cards[5];
-				selectedcard2 = player1cards[13];
-				player1cards[13] = selectedcard1;
-				player1cards[5] = selectedcard2;
-				Timer1.Enabled = true;
-				fillcards();
-				Timer1.Enabled = true;
+			}
+			else if (j != 100 && k == 100)
+			{
+				k = 5;
+
+			}
+			else if (j == 100 && k == 14)
+			{
+
+				if (player1cards[13] != 0)
+				{
+					ImageButton6.BorderColor = System.Drawing.Color.Red;
+					ImageButton6.BorderStyle = BorderStyle.Solid;
+					selectedcard1 = player1cards[5];
+					selectedcard2 = player1cards[13];
+					player1cards[13] = selectedcard1;
+					player1cards[5] = selectedcard2;
+					Timer1.Enabled = true;
+					fillcards();
+					Timer1.Enabled = true;
+				}
+			}
+
+			if (j != 100 && k != 100 && j != 14 && k != 14)
+			{
+				selectcard = 0;
+				sortcards(j, k);
+
 			}
 		}
-
-		if (j != 100 && k != 100 && j != 14 && k != 14)
-		{
-			selectcard = 0;
-			sortcards(j, k);
-			
-		}
-		
 	}
 
 	protected void ImageButton7_Click(object sender, ImageClickEventArgs e)
 	{
 
 
-		if  (j == 100)
-		{
-			j = 6;
-			ImageButton7.BorderColor = System.Drawing.Color.Red;
-			ImageButton7.BorderStyle = BorderStyle.Solid;
-			selectedcard1 = player1cards[6];
-		}
-
-		else if (j != 100 && k == 100)
-		{
-			k = 6;
-			
-		}
-		else if (k  == 14)
+		if (selectcard == 1)
 		{
 
-			if (player1cards[13] != 0)
+			if (j == 100)
 			{
+				j = 6;
 				ImageButton7.BorderColor = System.Drawing.Color.Red;
 				ImageButton7.BorderStyle = BorderStyle.Solid;
 				selectedcard1 = player1cards[6];
-				selectedcard2 = player1cards[13];
-				player1cards[13] = selectedcard1;
-				player1cards[6] = selectedcard2;
-				Timer1.Enabled = true;
-				fillcards();
-				Timer1.Enabled = true;
+			}
+
+			else if (j != 100 && k == 100)
+			{
+				k = 6;
+
+			}
+			else if (k == 14)
+			{
+
+				if (player1cards[13] != 0)
+				{
+					ImageButton7.BorderColor = System.Drawing.Color.Red;
+					ImageButton7.BorderStyle = BorderStyle.Solid;
+					selectedcard1 = player1cards[6];
+					selectedcard2 = player1cards[13];
+					player1cards[13] = selectedcard1;
+					player1cards[6] = selectedcard2;
+					Timer1.Enabled = true;
+					fillcards();
+					Timer1.Enabled = true;
+				}
+			}
+
+			if (j != 100 && k != 100 && j != 14 && k != 14)
+			{
+				selectcard = 0;
+				sortcards(j, k);
+
 			}
 		}
-
-		if (j != 100 && k != 100 && j != 14 && k != 14)
-		{
-			selectcard = 0;
-			sortcards(j, k);
-			
-		}
-		
 	}
 
 	protected void ImageButton8_Click(object sender, ImageClickEventArgs e)
 	{
 
-		if  (j == 100)
-		{
-			j = 7;
-			ImageButton8.BorderColor = System.Drawing.Color.Red;
-			ImageButton8.BorderStyle = BorderStyle.Solid;
-			selectedcard1 = player1cards[7];
-		}
-
-		else if (j != 100 && k == 100)
-		{
-			k = 7;
-			
-		}
-		else if (k  == 14)
+		if (selectcard == 1)
 		{
 
-			if (player1cards[13] != 0)
+			if (j == 100)
 			{
+				j = 7;
 				ImageButton8.BorderColor = System.Drawing.Color.Red;
 				ImageButton8.BorderStyle = BorderStyle.Solid;
 				selectedcard1 = player1cards[7];
-				selectedcard2 = player1cards[13];
-				player1cards[13] = selectedcard1;
-				player1cards[7] = selectedcard2;
-				Timer1.Enabled = true;
-				fillcards();
-				Timer1.Enabled = true;
 			}
-		}
 
-		if (j != 100 && k != 100 && j != 14 && k != 14)
-		{
-			selectcard = 0;
-			sortcards(j, k);
-			
+			else if (j != 100 && k == 100)
+			{
+				k = 7;
+
+			}
+			else if (k == 14)
+			{
+
+				if (player1cards[13] != 0)
+				{
+					ImageButton8.BorderColor = System.Drawing.Color.Red;
+					ImageButton8.BorderStyle = BorderStyle.Solid;
+					selectedcard1 = player1cards[7];
+					selectedcard2 = player1cards[13];
+					player1cards[13] = selectedcard1;
+					player1cards[7] = selectedcard2;
+					Timer1.Enabled = true;
+					fillcards();
+					Timer1.Enabled = true;
+				}
+			}
+
+			if (j != 100 && k != 100 && j != 14 && k != 14)
+			{
+				selectcard = 0;
+				sortcards(j, k);
+
+			}
 		}
 		
 	}
@@ -654,41 +681,46 @@
 	protected void ImageButton9_Click(object sender, ImageClickEventArgs e)
 	{
 
-		if  (j == 100)
-		{
-			j = 8;
-			ImageButton9.BorderColor = System.Drawing.Color.Red;
-			ImageButton9.BorderStyle = BorderStyle.Solid;
-			selectedcard1 = player1cards[8];
-		}
-		else if (j != 100 && k == 100)
-		{
-			k = 8;
-			
-		}
-		else if (k  == 14)
+
+		if (selectcard == 1)
 		{
 
-			if (player1cards[13] != 0)
+			if (j == 100)
 			{
+				j = 8;
 				ImageButton9.BorderColor = System.Drawing.Color.Red;
 				ImageButton9.BorderStyle = BorderStyle.Solid;
 				selectedcard1 = player1cards[8];
-				selectedcard2 = player1cards[13];
-				player1cards[13] = selectedcard1;
-				player1cards[8] = selectedcard2;
-				Timer1.Enabled = true;
-				fillcards();
-				Timer1.Enabled = true;
+			}
+			else if (j != 100 && k == 100)
+			{
+				k = 8;
 
 			}
-		}
+			else if (k == 14)
+			{
 
-		if (j != 100 && k != 100 && j != 14 && k != 14)
-		{
-			selectcard = 0;
-			sortcards(j, k);
-			
+				if (player1cards[13] != 0)
+				{
+					ImageButton9.BorderColor = System.Drawing.Color.Red;
+					ImageButton9.BorderStyle = BorderStyle.Solid;
+					selectedcard1 = player1cards[8];
+					selectedcard2 = player1cards[13];
+					player1cards[13] = selectedcard1;
+					player1cards[8] = selectedcard2;
+					Timer1.Enabled = true;
+					fillcards();
+					Timer1.Enabled = true;
+
+				}
+			}
+
+			if (j != 100 && k != 100 && j != 14 && k != 14)
+			{
+				selectcard = 0;
+				sortcards(j, k);
+
+			}
 		}
 		
 	}
@@ -697,41 +729,45 @@
 	{
 
 
-		if  (j == 100)
-		{
-			j = 9;
-			ImageButton10.BorderColor = System.Drawing.Color.Red;
-			ImageButton10.BorderStyle = BorderStyle.Solid;
-			selectedcard1 = player1cards[9];
-		}
-
-		else if (j != 100 && k == 100)
-		{
-			k = 9;
-			
-		}
-		else if (j == 100 && k == 14)
+		if (selectcard == 1)
 		{
 
-			if (player1cards[13] != 0)
+			if (j == 100)
 			{
+				j = 9;
 				ImageButton10.BorderColor = System.Drawing.Color.Red;
 				ImageButton10.BorderStyle = BorderStyle.Solid;
 				selectedcard1 = player1cards[9];
-				selectedcard2 = player1cards[13];
-				player1cards[13] = selectedcard1;
-				player1cards[9] = selectedcard2;
-				Timer1.Enabled = true;
-				fillcards();
-				Timer1.Enabled = true;
 			}
-		}
 
-		if (j != 100 && k != 100 && j != 14 && k != 14)
-		{
-			selectcard = 0;
-			sortcards(j, k);
-			
+			else if (j != 100 && k == 100)
+			{
+				k = 9;
+
+			}
+			else if (j == 100 && k == 14)
+			{
+
+				if (player1cards[13] != 0)
+				{
+					ImageButton10.BorderColor = System.Drawing.Color.Red;
+					ImageButton10.BorderStyle = BorderStyle.Solid;
+					selectedcard1 = player1cards[9];
+					selectedcard2 = player1cards[13];
+					player1cards[13] = selectedcard1;
+					player1cards[9] = selectedcard2;
+					Timer1.Enabled = true;
+					fillcards();
+					Timer1.Enabled = true;
+				}
+			}
+
+			if (j != 100 && k != 100 && j != 14 && k != 14)
+			{
+				selectcard = 0;
+				sortcards(j, k);
+
+			}
 		}
 		
 	}
@@ -740,42 +776,46 @@
 	{
 
 
-		if  (j == 100)
-		{
-			j = 10;
-			ImageButton11.BorderColor = System.Drawing.Color.Red;
-			ImageButton11.BorderStyle = BorderStyle.Solid;
-			selectedcard1 = player1cards[10];
-		}
-
-		else if (j != 100 && k == 100)
-		{
-			k = 10;
-			
-		}
-		else if (k  == 14)
+		if (selectcard == 1)
 		{
 
-			if (player1cards[13] != 0)
+			if (j == 100)
 			{
+				j = 10;
 				ImageButton11.BorderColor = System.Drawing.Color.Red;
 				ImageButton11.BorderStyle = BorderStyle.Solid;
 				selectedcard1 = player1cards[10];
-				selectedcard2 = player1cards[13];
-				player1cards[13] = selectedcard1;
-				player1cards[10] = selectedcard2;
-				Timer1.Enabled = true;
-				fillcards();
-				Timer1.Enabled = true;
+			}
+
+			else if (j != 100 && k == 100)
+			{
+				k = 10;
 
 			}
-		}
+			else if (k == 14)
+			{
 
-		if (j != 100 && k != 100 && j != 14 && k != 14)
-		{
-			selectcard = 0;
-			sortcards(j, k);
-			
+				if (player1cards[13] != 0)
+				{
+					ImageButton11.BorderColor = System.Drawing.Color.Red;
+					ImageButton11.BorderStyle = BorderStyle.Solid;
+					selectedcard1 = player1cards[10];
+					selectedcard2 = player1cards[13];
+					player1cards[13] = selectedcard1;
+					player1cards[10] = selectedcard2;
+					Timer1.Enabled = true;
+					fillcards();
+					Timer1.Enabled = true;
+
+				}
+			}
+
+			if (j != 100 && k != 100 && j != 14 && k != 14)
+			{
+				selectcard = 0;
+				sortcards(j, k);
+
+			}
 		}
 		
 	}
@@ -784,42 +824,46 @@
 	{
 
 
-		if  (j == 100)
-		{
-			j = 11;
-			ImageButton12.BorderColor = System.Drawing.Color.Red;
-			ImageButton12.BorderStyle = BorderStyle.Solid;
-			selectedcard1 = player1cards[11];
-		}
-
-		else if (j != 100 && k == 100)
-		{
-			k = 11;
-			
-		}
-		else if (j == 100 && k == 14)
+		if (selectcard == 1)
 		{
 
-			if (player1cards[13] != 0)
+			if (j == 100)
 			{
+				j = 11;
 				ImageButton12.BorderColor = System.Drawing.Color.Red;
 				ImageButton12.BorderStyle = BorderStyle.Solid;
 				selectedcard1 = player1cards[11];
-				selectedcard2 = player1cards[13];
-				player1cards[13] = selectedcard1;
-				player1cards[11] = selectedcard2;
-				Timer1.Enabled = true;
-				fillcards();
-				Timer1.Enabled = true;
+			}
+
+			else if (j != 100 && k == 100)
+			{
+				k = 11;
 
 			}
-		}
+			else if (j == 100 && k == 14)
+			{
 
-		if (j != 100 && k != 100 && j != 14 && k != 14)
-		{
-			selectcard = 0;
-			sortcards(j, k);
-			
+				if (player1cards[13] != 0)
+				{
+					ImageButton12.BorderColor = System.Drawing.Color.Red;
+					ImageButton12.BorderStyle = BorderStyle.Solid;
+					selectedcard1 = player1cards[11];
+					selectedcard2 = player1cards[13];
+					player1cards[13] = selectedcard1;
+					player1cards[11] = selectedcard2;
+					Timer1.Enabled = true;
+					fillcards();
+					Timer1.Enabled = true;
+
+				}
+			}
+
+			if (j != 100 && k != 100 && j != 14 && k != 14)
+			{
+				selectcard = 0;
+				sortcards(j, k);
+
+			}
 		}
 		
 	}
@@ -828,42 +872,46 @@
 	{
 
 
-		if  (j == 100)
-		{
-			j = 12;
-			ImageButton13.BorderColor = System.Drawing.Color.Red;
-			ImageButton13.BorderStyle = BorderStyle.Solid;
-			selectedcard1 = player1cards[12];
-		}
-
-		else if (j != 100 && k == 100)
-		{
-			k = 12;
-			
-
-		}
-		else if (j == 100 && k == 14)
+		if (selectcard == 1)
 		{
 
-			if (player1cards[13] != 0)
+			if (j == 100)
 			{
+				j = 12;
 				ImageButton13.BorderColor = System.Drawing.Color.Red;
 				ImageButton13.BorderStyle = BorderStyle.Solid;
 				selectedcard1 = player1cards[12];
-				selectedcard2 = player1cards[13];
-				player1cards[13] = selectedcard1;
-				player1cards[12] = selectedcard2;
-				Timer1.Enabled = true;
-				fillcards();
-				Timer1.Enabled = true;
 			}
-		}
 
-		if (j != 100 && k != 100 && j != 14 && k != 14)
-		{
-			selectcard = 0;
-			sortcards(j, k);
-			
+			else if (j != 100 && k == 100)
+			{
+				k = 12;
+
+
+			}
+			else if (j == 100 && k == 14)
+			{
+
+				if (player1cards[13] != 0)
+				{
+					ImageButton13.BorderColor = System.Drawing.Color.Red;
+					ImageButton13.BorderStyle = BorderStyle.Solid;
+					selectedcard1 = player1cards[12];
+					selectedcard2 = player1cards[13];
+					player1cards[13] = selectedcard1;
+					player1cards[12] = selectedcard2;
+					Timer1.Enabled = true;
+					fillcards();
+					Timer1.Enabled = true;
+				}
+			}
+
+			if (j != 100 && k != 100 && j != 14 && k != 14)
+			{
+				selectcard = 0;
+				sortcards(j, k);
+
+			}
 		}
 		
 	}
@@ -871,35 +919,38 @@
 	protected void ImageButton14_Click(object sender, ImageClickEventArgs e)
 	{
 
-		if  (k == 100)
-		{
-			k = 14;
-			ImageButton14.BorderColor = System.Drawing.Color.Red;
-			ImageButton14.BorderStyle = BorderStyle.Solid;
-			selectedcard2 = player1cards[13];
-			fillcards();
-			
-		}
-
-		if (j != 100 && k == 14)
+		if (selectcard == 1)
 		{
 
-			if (player1cards[13] != 0)
-			{ 
-			ImageButton14.BorderColor = System.Drawing.Color.Red;
-			ImageButton14.BorderStyle = BorderStyle.Solid;
-				
-			selectedcard2 = player1cards[13];
-			player1cards[13] = selectedcard1;
-			player1cards[j] = selectedcard2;
-			fillcards();
-			Timer1.Enabled = true;
-			
-				
+			if (k == 100)
+			{
+				k = 14;
+				ImageButton14.BorderColor = System.Drawing.Color.Red;
+				ImageButton14.BorderStyle = BorderStyle.Solid;
+				selectedcard2 = player1cards[13];
+				fillcards();
+
 			}
-		}
 
-		
+			if (j != 100 && k == 14)
+			{
+
+				if (player1cards[13] != 0)
+				{
+					ImageButton14.BorderColor = System.Drawing.Color.Red;
+					ImageButton14.BorderStyle = BorderStyle.Solid;
+
+					selectedcard2 = player1cards[13];
+					player1cards[13] = selectedcard1;
+					player1cards[j] = selectedcard2;
+					fillcards();
+					Timer1.Enabled = true;
+
+
+				}
+			}
+
+		}
 		
 	}
 
