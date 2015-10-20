@@ -1041,6 +1041,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+	<meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Online Rummy Game also Reserve a Table to Play exclusively with your Friends"/>
     <title>KISMAT RUMMY</title>
 	<style type="text/css">
 		#image1 {

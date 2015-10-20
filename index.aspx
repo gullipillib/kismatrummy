@@ -19,6 +19,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+	<meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Online Rummy Game also Reserve a Table to Play exclusively with your Friends"/>
     <title>KISMAT RUMMY</title>
 </head>
 <body style="background-color:black;">
@@ -50,7 +52,7 @@ our games. </h2>
 </asp:UpdatePanel>
 
 <asp:GridView ID="GridView1"  runat="server" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" ForeColor="White" 
-			style="top: 29%; left: 4%; position: absolute; height: 48%; width: 90%">
+			style="top: 177px; left: 16px; position: absolute; height: 200px; width: 1186px">
 			<Columns>
 				<asp:CommandField ButtonType="Button" SelectText="Play Now" ShowSelectButton="True" />
 				<asp:BoundField DataField="tableno" HeaderText="Table Number" SortExpression="tableno" />
